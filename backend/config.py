@@ -19,7 +19,7 @@ class Config:
     DEBUG = os.getenv('FLASK_ENV') == 'development'
     
     # NSIF Active Directory
-    AD_SERVER = os.getenv('AD_SERVER', '192.168.1.124')
+    AD_SERVER = os.getenv('AD_SERVER', '192.168.56.102')
     AD_DOMAIN = os.getenv('AD_DOMAIN', 'nsif-local.test')
     AD_BASE_DN = os.getenv('AD_BASE_DN', 'DC=nsif-local,DC=test')
     AD_ADMIN_DN = os.getenv('AD_ADMIN_DN', 'CN=Administrator,CN=Users,DC=nsif-local,DC=test')

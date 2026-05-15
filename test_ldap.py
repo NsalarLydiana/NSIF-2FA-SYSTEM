@@ -1,7 +1,7 @@
 # test_ldap.py
 from ldap3 import Server, Connection, ALL, SUBTREE
 
-LDAP_SERVER = "192.168.1.124"
+LDAP_SERVER = "192.168.56.102"
 BASE_DN = "DC=nsif-local,DC=test"
 
 # Use the new simple password
@@ -35,7 +35,7 @@ try:
         search_base=BASE_DN,
         search_filter="(sAMAccountName=hr_user1)",
         search_scope=SUBTREE,
-        attributes=["cn", "displayName"]
+        attributes=[ "cn", "displayName" ]
     )
     
     if conn.entries:
